@@ -8,6 +8,13 @@ export default {
   ],
   theme: {
   	extend: {
+
+
+		fontFamily:{
+			'sf': ['var(--font-sf-pro)', 'sans-serif'],
+			'bebas': ['var(--font-bebas-neue)', 'sans-serif'],
+		},
+
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
