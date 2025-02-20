@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { signup } from '@/app/actions/auth'
 
 export default function LoginPage() {
   
@@ -21,6 +22,23 @@ export default function LoginPage() {
         <div className="login-subtext">
             <h2 className="text-[16px]">Please enter your email and password</h2>
         </div>
+
+        <div className="login-form">
+        <form action={login}>
+      <div>
+        <label htmlFor="email">Email</label>
+        <input id="email" name="email" placeholder="Enter your email" />
+      </div>
+      <div>
+        <label htmlFor="password">Password</label>
+        <input id="password" name="password" type="password" />
+      </div>
+      <button type="submit">Sign Up</button>
+    </form>
+        </div>
+
+
+
 
 
     </div>
