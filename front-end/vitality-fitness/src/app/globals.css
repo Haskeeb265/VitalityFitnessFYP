@@ -1,16 +1,58 @@
 @import "tailwindcss";
 
+
+@font-face {
+  font-family: "Bebas_Neue";
+  src: url("/fonts/BebasNeue-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF_Pro_Regular";
+  src: url("/fonts/SF-Pro-Display-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF_Pro_Medium";
+  src: url("/fonts/SF-Pro-Display-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF_Pro_Bold";
+  src: url("/fonts/SF-Pro-Display-Bold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* Apply fonts globally */
+
+.bebas {
+  font-family: "Bebas_Neue", sans-serif;
+}
+
+.sf-regular{
+  font-family: "SF_Pro_Regular", sans-serif;
+}
+
+.sf-medium {
+  font-family: "SF_Pro_Medium", sans-serif;
+}
+
+.sf-bold {
+  font-family: "SF_Pro_Bold", sans-serif;
+}
+
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 html,
 body {
@@ -21,7 +63,7 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: SF_Pro_Regular, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -35,10 +77,4 @@ body {
 a {
   color: inherit;
   text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
 }
