@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        .scrollable { 
+            max-height: 200px; 
+            overflow-y: auto; 
+            border: 1px solid #ccc; 
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .equipment-section {
+            border: 1px solid #dee2e6;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .equipment-title {
+            margin-bottom: 15px;
+            color: #495057;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2>Signup Form</h2>
+    <form id="signupForm">
+        <!-- Previous form fields remain unchanged -->
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" required maxlength="26" placeholder="Enter your name">
+        </div>
+
+        <div class="form-group">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" class="form-control" id="dob" required>
+        </div>
+
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" class="form-control" id="age" readonly>
+            <small id="ageHelp" class="form-text text-muted">Automatically calculated from your date of birth.</small>
+        </div>
+
+        <div class="form-group">
+            <label for="height">Height (in cm):</label>
+            <input type="number" class="form-control" id="height" required min="30.48" max="243.84" placeholder="Enter height in cm">
+        </div>
+
+        <div class="form-group">
+            <label for="weight">Current Weight (in kg):</label>
+            <input type="number" class="form-control" id="weight" required min="20" max="600" placeholder="Enter weight in kg">
+        </div>
+
+        <div class="form-group">
+            <label for="bmi">BMI:</label>
+            <input type="text" class="form-control" id="bmi" readonly>
+            <small id="bmiHelp" class="form-text text-muted">Automatically calculated from weight and height.</small>
+        </div>
+
+        <div class="form-group">
+            <label for="medicalCondition">Medical Condition:</label>
+            <select class="form-control" id="medicalCondition" required>
+                <option value="" disabled selected>Select your condition</option>
+                <option value="none">None</option>
+                <option value="HyperTension">HyperTension</option>
+                <option value="Coronary Heart Disease">Coronary Heart Disease</option>
+                <option value="Atrial Fibrillation">Atrial Fibrillation</option>
+                <option value="Asthma">Asthma</option>
+                <option value="Chronic obstructive pulmonary disease">Chronic obstructive pulmonary disease</option>
+                <option value="Sleep Apnea">Sleep Apnea</option>
+                <option value="Type 1 Diabetes">Type 1 Diabetes</option>
+                <option value="Type 2 Diabetes">Type 2 Diabetes</option>
+                <option value="Hypothyroidism">Hypothyroidism</option>
+                <option value="Hyperthyroidism">Hyperthyroidism</option>
+                <option value="Polycystic Ovary Syndrome">Polycystic Ovary Syndrome</option>
+                <option value="Osteoarthritis">Osteoarthritis</option>
+                <option value="Rheumatoid Arthritis">Rheumatoid Arthritis</option>
+                <option value="Carpal Tunnel Syndrome">Carpal Tunnel Syndrome</option>
+                <option value="Osteoporosis">Osteoporosis</option>
+                <option value="Multiple Sclerosis">Multiple Sclerosis</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="currentBodyType">Current Body Type:</label>
+            <select class="form-control" id="currentBodyType" required>
+                <option value="" disabled selected>Select your current body type</option>
+                <option value="muscular">Muscular</option>
+                <option value="lean">Lean</option>
+                <option value="fat">Fat</option>
+                <option value="thin">Thin</option>
+                <option value="average">Average</option>
+                <option value="obese">Obese</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="desiredBodyType">Desired Body Type:</label>
+            <select class="form-control" id="desiredBodyType" required>
+                <option value="" disabled selected>Select your desired body type</option>
+                <option value="simpleWeightLoss">Simple Weight Loss</option>
+                <option value="muscular">Muscular</option>
+                <option value="lean">Lean</option>
+                <option value="sleeperBuild">Sleeper Build</option>
+                <option value="athletic">Athletic</option>
+                <option value="toned">Toned</option>
+            </select>
+        </div>
+
+        <!-- New Equipment Selection Section -->
+        <div class="equipment-section">
+            <h4 class="equipment-title">Available Equipment</h4>
+            <div class="form-group">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="yogaMat" name="equipment">
+                    <label class="custom-control-label" for="yogaMat">Yoga Mat</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="medicineBall" name="equipment">
+                    <label class="custom-control-label" for="medicineBall">Medicine Ball</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="bicycle" name="equipment">
+                    <label class="custom-control-label" for="bicycle">Bicycle</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="abRoller" name="equipment">
+                    <label class="custom-control-label" for="abRoller">Ab Roller</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="jumpingRopes" name="equipment">
+                    <label class="custom-control-label" for="jumpingRopes">Jumping Ropes</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="dumbbells" name="equipment">
+                    <label class="custom-control-label" for="dumbbells">Dumbbells</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="kettleweight" name="equipment">
+                    <label class="custom-control-label" for="kettleweight">Kettle weight</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="treadmill" name="equipment">
+                    <label class="custom-control-label" for="treadmill">Treadmill</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+<script>
+    // Calculate age based on date of birth
+    document.getElementById('dob').addEventListener('change', function() {
+        const dob = new Date(this.value);
+        const age = new Date().getFullYear() - dob.getFullYear();
+        document.getElementById('age').value = age < 0 ? 0 : age;
+    });
+
+    // Calculate BMI in real time
+    $('#weight, #height').on('input', function() {
+        const weight = parseFloat($('#weight').val());
+        const height = parseFloat($('#height').val()) / 100; // convert cm to meters
+
+        if (weight && height) {
+            const bmi = (weight / (height * height)).toFixed(2);
+            $('#bmi').val(bmi);
+        } else {
+            $('#bmi').val('');
+        }
+    });
+
+    // Handle form submission
+    $('#signupForm').submit(function(event) {
+        event.preventDefault();  // Prevent form from submitting normally
+
+        // Get selected equipment
+        const selectedEquipment = [];
+        $('input[name="equipment"]:checked').each(function() {
+            selectedEquipment.push(this.id);
+        });
+
+        // Gather the form data
+        const formData = {
+            name: $('#name').val(),
+            dob: $('#dob').val(),
+            age: $('#age').val(),
+            height: $('#height').val(),
+            weight: $('#weight').val(),
+            bmi: $('#bmi').val(),
+            medicalCondition: $('#medicalCondition').val(),
+            currentBodyType: $('#currentBodyType').val(),
+            desiredBodyType: $('#desiredBodyType').val(),
+            equipment: selectedEquipment
+        };
+
+        // Send the data to Flask
+        fetch('/saveExercises', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert('Exercises saved to ' + data.filename);
+            } else {
+                alert('Error: ' + data.error);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('An error occurred.');
+        });
+    });
+</script>
+
+</body>
+</html>
