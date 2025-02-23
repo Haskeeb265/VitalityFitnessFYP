@@ -6,6 +6,8 @@
       "@/pages/*": ["./pages/*"],
       "@/components/*": ["./components/*"],
       "@/public/*": ["./public/*"],
+      "@/lib/*": ["./lib/*"],
+      "@/models/*": ["./models/*"],
     }
   }
 }
