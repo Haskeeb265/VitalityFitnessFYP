@@ -1,6 +1,6 @@
 const TextField = ({ label, id, type = "text", placeholder, value, onChange }) => {
   return (
-    <div className="flex items-center justify-between mb-[12px]">
+    <div className="flex items-center justify-between w-70 mb-[12px]">
       <label className="text-[12px] text-[#DB4A2B]" htmlFor={id}>
         {label}
       </label>
